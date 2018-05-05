@@ -28,7 +28,7 @@ module generate_shell(size, radius){
     }
 }
 
-module time_cube(size = 32, radius = 3.5, thickness = 5, hole_radius = 12.5, lip_radius = 2.5){
+module time_cube(size = 32, radius = 3.5, thickness = 5, hole_radius = 13.5, lip_radius = 2.5){
     difference(){
         union(){
             difference(){
@@ -59,7 +59,7 @@ module time_cube(size = 32, radius = 3.5, thickness = 5, hole_radius = 12.5, lip
 
         /* inner hole diameter */
         translate([0, 0, size / 2 + radius - 0.5])
-            cylinder(r = hole_radius - 0.75, h = thickness * 2, center = true);
+            cylinder(r = hole_radius - 2, h = thickness * 2, center = true);
     }
 
     /* inner hole filling */
